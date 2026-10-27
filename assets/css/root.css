@@ -1,14 +1,18 @@
 @font-face {
     font-family: 'TheBoldFont';
-    src: url('/assets/font/THEBOLDFONT-FREEVERSION.otf') format('opentype'),
-        url('/assets/font/THEBOLDFONT-FREEVERSION.ttf') format('truetype');
+    src: url('../font/THEBOLDFONT-FREEVERSION.otf') format('opentype'),
+        url('../font/THEBOLDFONT-FREEVERSION.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'Quadrillion';
-    src: url('/assets/font/quadrillion.semi-bold.otf') format('opentype');
+    src: url('../font/quadrillion.semi-bold.otf') format('opentype');
     font-weight: 600;
     font-style: normal;
+    font-display: swap;
 }
 
 :root {
@@ -108,13 +112,13 @@
 
     --header-bg: rgb(255, 255, 255, 0.4);
     --message-bg: rgb(255, 255, 255, 0.5);
-    --bg-primary: #ffffff;
-    --bg-secondary: #f8fafc;
-    --bg-tertiary: #e5ecf3;
+    --bg-primary: #f3f6fb;
+    --bg-secondary: #e8eef7;
+    --bg-tertiary: #d8e3f0;
     --bg-elevated: #ffffff;
-    --bg-glass: rgba(255, 255, 255, 0.7);
-    --bg-overlay: rgba(15, 23, 42, 0.5);
-    --bg-accent: linear-gradient(135deg, #eef5ff 0%, #f0f9ff 100%);
+    --bg-glass: rgba(207, 225, 250, 0.72);
+    --bg-overlay: rgba(15, 23, 42, 0.58);
+    --bg-accent: linear-gradient(135deg, #dbeafe 0%, #cffafe 100%);
 
     --text-primary: var(--neutral-900);
     --text-secondary: var(--neutral-700);
@@ -129,9 +133,9 @@
     --border-focus: var(--primary-500);
     --border-error: var(--error-500);
 
-    --shadow-xs: 0 1px 2px 0 rgba(15, 23, 42, 0.05);
-    --shadow-sm: 0 1px 3px 0 rgba(15, 23, 42, 0.12), 0 1px 2px 0 rgba(15, 23, 42, 0.08);
-    --shadow-md: 0 4px 6px -1px rgba(15, 23, 42, 0.12), 0 2px 4px -1px rgba(15, 23, 42, 0.08);
+    --shadow-xs: 0 2px 4px rgba(15, 23, 42, 0.18), 0 1px 2px rgba(15, 23, 42, 0.12);
+    --shadow-sm: 0 3px 8px rgba(15, 23, 42, 0.2), 0 2px 3px rgba(15, 23, 42, 0.14);
+    --shadow-md: 0 6px 14px -1px rgba(15, 23, 42, 0.24), 0 3px 6px rgba(15, 23, 42, 0.16);
     --shadow-lg: 0 10px 15px -3px rgba(15, 23, 42, 0.12), 0 4px 6px -2px rgba(15, 23, 42, 0.06);
     --shadow-xl: 0 20px 25px -5px rgba(15, 23, 42, 0.14), 0 10px 10px -5px rgba(15, 23, 42, 0.06);
     --shadow-2xl: 0 25px 50px -12px rgba(15, 23, 42, 0.3);
@@ -143,6 +147,7 @@
     --pop: 'Poppins', sans-serif;
     --unb: 'Unbounded', sans-serif;
     --bold: 'TheBoldFont', sans-serif;
+    --fredoka: 'Fredoka', var(--bold);
     --cod: 'Quadrillion', sans-serif;
 
     --z-base: 0;
@@ -174,7 +179,7 @@
     --breakpoint-2xl: 1536px;
 }
 
-[data-theme="dark"] {
+html[data-theme='dark'] {
     --header-bg: rgb(10, 10, 10, 0.4);
     --message-bg: rgb(10, 10, 10, 0.5);
     --bg-primary: #0a0a0a;
@@ -198,15 +203,15 @@
     --border-focus: var(--primary-500);
     --border-error: var(--error-400);
 
-    --shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.4);
-    --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.5), 0 1px 2px 0 rgba(0, 0, 0, 0.4);
-    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.5), 0 2px 4px -1px rgba(0, 0, 0, 0.4);
-    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.6), 0 4px 6px -2px rgba(0, 0, 0, 0.4);
-    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.7), 0 10px 10px -5px rgba(0, 0, 0, 0.4);
-    --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.8);
+    --shadow-xs: 0 2px 5px rgba(166, 190, 222, 0.42), 0 1px 2px rgba(0, 0, 0, 0.65);
+    --shadow-sm: 0 3px 9px rgba(155, 183, 222, 0.46), 0 2px 4px rgba(0, 0, 0, 0.65);
+    --shadow-md: 0 6px 16px -1px rgba(145, 178, 222, 0.5), 0 3px 6px rgba(0, 0, 0, 0.7);
+    --shadow-lg: 0 10px 22px -3px rgba(130, 157, 195, 0.3), 0 5px 10px -2px rgba(0, 0, 0, 0.65);
+    --shadow-xl: 0 20px 34px -5px rgba(130, 157, 195, 0.32), 0 8px 16px -4px rgba(0, 0, 0, 0.7);
+    --shadow-2xl: 0 28px 52px -10px rgba(130, 157, 195, 0.38), 0 12px 24px -6px rgba(0, 0, 0, 0.75);
     --shadow-premium: 0 20px 60px rgba(51, 113, 255, 0.2), 0 8px 24px rgba(51, 113, 255, 0.15);
     --shadow-glow: 0 0 20px rgba(89, 153, 255, 0.4), 0 0 40px rgba(89, 153, 255, 0.2);
-    --shadow-inner: inset 0 2px 4px 0 rgba(0, 0, 0, 0.3);
+    --shadow-inner: inset 0 2px 6px rgba(0, 0, 0, 0.65), inset 0 -1px 3px rgba(148, 163, 184, 0.24);
 
     --gradient-primary: linear-gradient(135deg, #3371ff 0%, #5999ff 50%, #8ebdff 100%);
     --gradient-secondary: linear-gradient(135deg, #06b6d4 0%, #22d3ee 50%, #67e8f9 100%);
@@ -224,7 +229,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    user-select: none !important;
 }
 
 body {
@@ -236,16 +240,7 @@ body {
     position: relative;
 }
 
-a,
-button,
-img,
-span,
-input,
-textarea,
-select,
-option {
-    cursor: none !important;
-}
+
 
 h1,
 h2,

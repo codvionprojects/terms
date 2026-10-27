@@ -1,10 +1,5 @@
 function toggleScroll(state) {
-    scroll = state;
-    if (!scroll) {
-        document.documentElement.style.overflow = "hidden";
-    } else {
-        document.documentElement.style.overflow = "auto";
-    }
+    document.documentElement.style.overflow = state ? "auto" : "hidden";
 }
 
 const header = document.querySelector('[data-header]');

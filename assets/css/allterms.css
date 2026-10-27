@@ -19,7 +19,7 @@
     padding: 36px 32px;
     overflow: hidden;
     text-align: left;
-    background: var(--bg-secondary);
+    background: var(--bg-primary);
     border: 1px solid var(--border-primary);
     border-radius: 20px;
     box-shadow: var(--shadow-lg);
